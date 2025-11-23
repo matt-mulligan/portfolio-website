@@ -9,6 +9,8 @@ for other projects, this seems like a good first project to try it out on.
 
 * Meta-Framework: Nuxt with TypeScript
 * Styling: TailwindCSS
+* Code Quality: ESLint
+* Code Formatting: Prettier
 * Testing: Vitest
 * Package Manager: Bun
 
