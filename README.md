@@ -7,16 +7,22 @@ for other projects, this seems like a good first project to try it out on.
 
 ## Stack
 
-* Meta-Framework: Nuxt with TypeScript
-* Styling: TailwindCSS
-* Code Quality: ESLint
-* Code Formatting: Prettier
-* Testing: Vitest
-* Package Manager: Bun
+- Meta-Framework: Nuxt with TypeScript
+- Styling: TailwindCSS
+- Code Quality: ESLint
+- Code Formatting: Prettier
+- Testing: Vitest
+- Package Manager: Bun
+- Pre Commit Hooks: Husky / lint-staged
 
 ## Nuxt Commands
 
-* Installs Deps: ```bun install```
-* Run Dev Server: ```bun run dev```
-* Build App: ```bun run build```
-* Local Prod Preview: ```bun run preview```
+- Installs Deps: `bun install`
+- Run Dev Server: `bun run dev`
+- Build App: `bun run build`
+- Local Prod Preview: `bun run preview`
+
+## Package Commands (package.json)
+- Lint: `bun run lint`
+- Lint with auto-fixes: `bun run lint-fix`
+- Format: `bun run format`

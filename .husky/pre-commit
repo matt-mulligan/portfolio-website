@@ -1,0 +1,5 @@
+PATH=$PATH:~/.bun/bin
+
+# bun test
+bun format
+bun lint-fix
