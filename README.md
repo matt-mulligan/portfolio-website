@@ -23,6 +23,7 @@ for other projects, this seems like a good first project to try it out on.
 - Local Prod Preview: `bun run preview`
 
 ## Package Commands (package.json)
+
 - Lint: `bun run lint`
 - Lint with auto-fixes: `bun run lint-fix`
 - Format: `bun run format`
