@@ -1,0 +1,11 @@
+:root {
+  --font-heading: 'Oswald', sans-serif;
+  --font-body: 'Lato', sans-serif;
+
+  --color-green-primary: #399b3c;
+  --color-green-secondary: #74b977;
+  --color-green-tertiary: #9ccd9e;
+
+  --color-grey-primary: #343a40;
+  --color-grey-secondary: #868e96;
+}

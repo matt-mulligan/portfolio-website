@@ -1,0 +1,64 @@
+/* Page-Level Container Grid */
+.template-layout {
+  display: grid;
+  grid-template-rows: 100vh;
+  grid-template-columns: 18vw 82vw;
+  grid-template-areas: 'template-sidebar template-content';
+}
+
+/* Main Element Grids */
+.template-sidebar {
+  grid-area: template-sidebar;
+  background-color: var(--color-green-primary);
+
+  display: grid;
+  grid-template-rows: 1.5fr 2fr 5fr 1.5fr;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'sb-spacing-top'
+    'sb-img'
+    'sb-nav'
+    'sb-spacing-bottom';
+}
+
+.template-content {
+  grid-area: template-content;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  min-height: 100vh;
+  padding: 4rem;
+}
+
+/* Child Sidebar Classes */
+.sb-spacing-top {
+  grid-area: sb-spacing-top;
+}
+
+.sb-img {
+  grid-area: sb-img;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-pic {
+  width: min(70%, 200px);
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 10px solid var(--color-green-secondary);
+  display: block;
+}
+
+.sb-nav {
+  grid-area: sb-nav;
+}
+
+.sb-spacing-bottom {
+  grid-area: sb-spacing-bottom;
+}
