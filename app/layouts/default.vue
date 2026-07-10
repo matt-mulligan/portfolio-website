@@ -1,21 +1,39 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const links = [
+  { label: 'About', to: '/' },
+  { label: 'Experience', to: '/experience' },
+  { label: 'Education', to: '/education' },
+  { label: 'Skills', to: '/skills' },
+]
+</script>
 
 <template>
   <div class="template-layout">
+
     <aside class="template-sidebar">
-      <div class="sb-spacing-top">SPACING TOP</div>
-      <div class="sb-img">
+      <div class="sb-spacing-top"></div>
+
+      <div class="sb-content">
         <NuxtImg
-          class="profile-pic"
-          format="jpg"
-          src="/profile_picture.jpg"
-          alt="Look at that handsome devil!"
+            class="profile-pic"
+            format="jpg"
+            src="/profile_picture.jpg"
+            alt="Look at that handsome devil!"
         >
         </NuxtImg>
+        <NuxtLink
+            v-for="link in links"
+            :key="link.to"
+            :to="link.to"
+            class="nav-link"
+        >
+          {{ link.label }}
+        </NuxtLink>
       </div>
-      <div class="sb-nav">NAV</div>
-      <div class="sb-spacing-bottom">SPACING BOTTOM</div>
+
+      <div class="sb-spacing-bottom"></div>
     </aside>
+
     <main class="template-content">
       <slot />
     </main>

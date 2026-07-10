@@ -12,12 +12,11 @@
   background-color: var(--color-green-primary);
 
   display: grid;
-  grid-template-rows: 1.5fr 2fr 5fr 1.5fr;
+  grid-template-rows: 2fr 6fr 2fr;
   grid-template-columns: 1fr;
   grid-template-areas:
     'sb-spacing-top'
-    'sb-img'
-    'sb-nav'
+    'sb-content'
     'sb-spacing-bottom';
 }
 
@@ -38,14 +37,6 @@
   grid-area: sb-spacing-top;
 }
 
-.sb-img {
-  grid-area: sb-img;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .profile-pic {
   width: min(70%, 200px);
   aspect-ratio: 1;
@@ -55,8 +46,15 @@
   display: block;
 }
 
-.sb-nav {
-  grid-area: sb-nav;
+.sb-content {
+  grid-area: sb-content;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem;
 }
 
 .sb-spacing-bottom {
