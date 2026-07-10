@@ -8,5 +8,5 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()],
   },
 
-  modules: ['@nuxt/content', '@nuxt/eslint', '@nuxt/image', '@nuxt/test-utils', '@nuxt/ui'],
+  modules: ['@nuxt/content', '@nuxt/eslint', '@nuxt/image', '@nuxt/test-utils', '@nuxt/ui', '@nuxt/icon'],
 });
