@@ -1,0 +1,62 @@
+/* Page-Level Container Grid */
+.template-layout {
+  display: grid;
+  grid-template-rows: 100vh;
+  grid-template-columns: 18vw 82vw;
+  grid-template-areas: 'template-sidebar template-content';
+}
+
+/* Main Element Grids */
+.template-sidebar {
+  grid-area: template-sidebar;
+  background-color: var(--color-green-primary);
+
+  display: grid;
+  grid-template-rows: 2fr 6fr 2fr;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'sb-spacing-top'
+    'sb-content'
+    'sb-spacing-bottom';
+}
+
+.template-content {
+  grid-area: template-content;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  min-height: 100vh;
+  padding: 4rem;
+}
+
+/* Child Sidebar Classes */
+.sb-spacing-top {
+  grid-area: sb-spacing-top;
+}
+
+.profile-pic {
+  width: min(70%, 200px);
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 10px solid var(--color-green-secondary);
+  display: block;
+}
+
+.sb-content {
+  grid-area: sb-content;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem;
+}
+
+.sb-spacing-bottom {
+  grid-area: sb-spacing-bottom;
+}
