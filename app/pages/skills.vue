@@ -33,7 +33,7 @@
             'Mentoring engineers and promoting engineering best practices through collaboration and knowledge sharing',
             'Translating business requirements into scalable technical solutions and engineering roadmaps',
           ],
-        }
+        },
       ],
     },
     {
@@ -57,8 +57,8 @@
             'Designed end to end data processing frameworks to support large-scale data analytics and machine learning applications',
             'Built and supported batch, micro-batch and streaming data processing pipelines through to production',
             'Performance optimisation through partitioning, caching, broadcast joins, predicate pushdown, and efficient execution plan tuning',
-            'Delivering production-grade data platforms with monitoring, testing, CI/CD, and fault-tolerant distributed processing on Azure'
-          ]
+            'Delivering production-grade data platforms with monitoring, testing, CI/CD, and fault-tolerant distributed processing on Azure',
+          ],
         },
         {
           subtitle: 'Golang',
@@ -66,7 +66,7 @@
             '1+ years experience',
             'Backend development in Go, building high-performance, scalable, and maintainable microservices using idiomatic Go practices',
             'RESTful and gRPC API development, designing secure, efficient, and well-documented backend services',
-          ]
+          ],
         },
       ],
     },
