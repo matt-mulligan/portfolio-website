@@ -1,9 +1,11 @@
 /* Page-Level Container Grid */
 .template-layout {
   display: grid;
-  grid-template-rows: 100vh;
+  grid-template-rows: auto;
   grid-template-columns: 18vw 82vw;
   grid-template-areas: 'template-sidebar template-content';
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 /* Main Element Grids */
@@ -29,8 +31,8 @@
   align-items: flex-start;
 
   min-height: 100vh;
+  min-height: 100dvh;
   padding: 4rem;
-  overflow: hidden;
 }
 
 .template-content > * {
