@@ -38,9 +38,9 @@
   }
 
   .experience-details {
-    list-style: none;
+    list-style-type: disc;
     margin: 0;
-    padding: 0;
+    padding-left: 1.5rem;
   }
 
   .experience-details .text-body {
