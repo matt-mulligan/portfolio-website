@@ -1,0 +1,124 @@
+/* HERO */
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(3.6rem, 7.2vw, 5.4rem);
+  font-weight: 700;
+  line-height: 0.95;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.hero-title .text-primary {
+  color: var(--color-grey-primary);
+}
+
+.hero-title .text-secondary {
+  color: var(--color-green-primary);
+}
+
+.hero-subtitle {
+  font-family: var(--font-heading);
+  font-size: 1.08rem;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin: 0.75rem 0 3rem;
+}
+
+.hero-subtitle .text-primary {
+  color: var(--color-grey-secondary);
+}
+
+.hero-subtitle .text-secondary {
+  color: var(--color-green-primary);
+}
+
+/* SIDEBAR */
+.nav-link {
+  color: var(--color-green-tertiary);
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  padding: 0.45rem 0;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-white);
+  transform: translateX(2px);
+}
+
+.nav-link.router-link-active {
+  color: var(--color-white);
+}
+
+/* PAGE */
+.page-title {
+  font-family: var(--font-heading);
+  font-size: 2.88rem;
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: var(--color-grey-primary);
+  margin-bottom: 3rem;
+}
+
+/* ==========================================================
+   SECTIONS
+   ========================================================== */
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 2.16rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--color-grey-primary);
+  margin-bottom: 0.15rem;
+}
+
+.section-subtitle {
+  font-family: var(--font-body);
+  font-size: 1.62rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--color-grey-secondary);
+  margin-bottom: 2rem;
+}
+
+.entry-dates {
+  color: var(--color-green-primary);
+  font-family: var(--font-body);
+  font-size: 1.377rem;
+  font-weight: 600;
+  margin: 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  .entry-dates {
+    white-space: normal;
+  }
+}
+
+/* ==========================================================
+   BODY
+   ========================================================== */
+
+.text-body {
+  font-family: var(--font-body);
+  font-size: 1.26rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--color-grey-secondary);
+  margin-bottom: 1rem;
+}

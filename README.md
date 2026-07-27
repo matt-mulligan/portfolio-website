@@ -1,12 +1,29 @@
 # Portfolio Website
 
-Project to create a basic portfolio website i can host on mattmulligan.net
+Project to create a basic portfolio website I can host on mattmulligan.net
 
-I currently have a basic flask site running on this domain but as im trying to learn nuxt 
+I currently have a basic flask site running on this domain but as im trying to learn nuxt
 for other projects, this seems like a good first project to try it out on.
 
 ## Stack
 
-* Metadata Framework: Nuxt with TypeScript
-* Styling: TailwindCSS
-* Testing: Vitest
+- Meta-Framework: Nuxt with TypeScript
+- Styling: TailwindCSS
+- Code Quality: ESLint
+- Code Formatting: Prettier
+- Testing: Vitest
+- Package Manager: Bun
+- Pre Commit Hooks: Husky / lint-staged
+
+## Nuxt Commands
+
+- Installs Deps: `bun install`
+- Run Dev Server: `bun run dev`
+- Build App: `bun run build`
+- Local Prod Preview: `bun run preview`
+
+## Package Commands (package.json)
+
+- Lint: `bun run lint`
+- Lint with auto-fixes: `bun run lint-fix`
+- Format: `bun run format`
