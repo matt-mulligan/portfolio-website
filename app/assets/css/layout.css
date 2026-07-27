@@ -1,15 +1,21 @@
 /* Page-Level Container Grid */
 .template-layout {
   display: grid;
-  grid-template-rows: 100vh;
-  grid-template-columns: 18vw 82vw;
+  grid-template-rows: auto;
+  grid-template-columns: 18% 82%;
   grid-template-areas: 'template-sidebar template-content';
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 /* Main Element Grids */
 .template-sidebar {
   grid-area: template-sidebar;
   background-color: var(--color-green-primary);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100dvh;
 
   display: grid;
   grid-template-rows: 2fr 6fr 2fr;
@@ -29,7 +35,80 @@
   align-items: flex-start;
 
   min-height: 100vh;
+  min-height: 100dvh;
   padding: 4rem;
+}
+
+.template-content > * {
+  width: 100%;
+}
+
+/* Page transitions */
+.page-swoop-down-enter-active {
+  animation: page-swoop-in-down 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.page-swoop-down-leave-active {
+  animation: page-swoop-out-down 220ms ease-in both;
+}
+
+.page-swoop-up-enter-active {
+  animation: page-swoop-in-up 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.page-swoop-up-leave-active {
+  animation: page-swoop-out-up 220ms ease-in both;
+}
+
+@keyframes page-swoop-in-down {
+  from {
+    clip-path: ellipse(135% 0% at 50% -10%);
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+
+  to {
+    clip-path: ellipse(135% 160% at 50% -10%);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes page-swoop-in-up {
+  from {
+    clip-path: ellipse(135% 0% at 50% 110%);
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+
+  to {
+    clip-path: ellipse(135% 160% at 50% 110%);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes page-swoop-out-down {
+  to {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+}
+
+@keyframes page-swoop-out-up {
+  to {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-swoop-down-enter-active,
+  .page-swoop-down-leave-active,
+  .page-swoop-up-enter-active,
+  .page-swoop-up-leave-active {
+    animation-duration: 1ms;
+  }
 }
 
 /* Child Sidebar Classes */
