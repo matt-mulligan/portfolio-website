@@ -2,7 +2,7 @@
 .template-layout {
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: 18vw 82vw;
+  grid-template-columns: 18% 82%;
   grid-template-areas: 'template-sidebar template-content';
   min-height: 100vh;
   min-height: 100dvh;
@@ -12,6 +12,10 @@
 .template-sidebar {
   grid-area: template-sidebar;
   background-color: var(--color-green-primary);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100dvh;
 
   display: grid;
   grid-template-rows: 2fr 6fr 2fr;
