@@ -136,6 +136,122 @@
   gap: 1rem;
 }
 
+.sb-header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.sb-navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menu-toggle {
+  display: none;
+}
+
 .sb-spacing-bottom {
   grid-area: sb-spacing-bottom;
+}
+
+@media (max-width: 700px) {
+  .template-layout {
+    display: block;
+  }
+
+  .template-sidebar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    height: auto;
+    display: block;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 18%);
+  }
+
+  .sb-spacing-top,
+  .sb-spacing-bottom {
+    display: none;
+  }
+
+  .sb-content {
+    display: block;
+  }
+
+  .sb-header {
+    align-items: center;
+    justify-content: space-between;
+    min-height: 4.5rem;
+    padding: 0.55rem 1.25rem;
+  }
+
+  .profile-pic {
+    width: 3.35rem;
+    border-width: 4px;
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0.55rem;
+    color: var(--color-white);
+    background: transparent;
+    border: 2px solid var(--color-green-tertiary);
+    border-radius: 0.4rem;
+    cursor: pointer;
+  }
+
+  .menu-toggle:focus-visible {
+    outline: 3px solid var(--color-white);
+    outline-offset: 2px;
+  }
+
+  .menu-toggle-line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: currentcolor;
+    border-radius: 1px;
+  }
+
+  .sb-navigation {
+    display: grid;
+    grid-template-rows: repeat(4, 0fr);
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition:
+      max-height 250ms ease,
+      opacity 180ms ease,
+      visibility 250ms;
+  }
+
+  .sb-navigation.is-open {
+    grid-template-rows: repeat(4, 1fr);
+    max-height: 18rem;
+    padding: 0.25rem 1.25rem 1rem;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .sb-navigation .nav-link {
+    width: 100%;
+    min-height: 0;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .template-content {
+    min-height: calc(100vh - 4.5rem);
+    min-height: calc(100dvh - 4.5rem);
+    padding: 2.5rem 1.25rem;
+  }
 }
